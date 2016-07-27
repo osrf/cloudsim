@@ -15,10 +15,15 @@ install nodejs
 `curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 sudo apt install -y nodejs`
 
-install global node modules
+install global node modules:
 
+Bower, the package manager for the browser components
 `npm install -g bower`
+
+Gulp, the web 'make'
 `npm install -g gulp`
+
+Polymer
 `npm install -g polymer-cli`
 
 
