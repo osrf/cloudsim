@@ -8,7 +8,7 @@ Install basic tools
 `apt install -y sudo curl mercurial git python-pip`
 
 install vcs, a tool to manage multiple repositories
-`sudo pip install python-vcstool`
+`sudo apt install python-vcstool`
 
 install nodejs
 

@@ -6,7 +6,6 @@
 bower link gz-accounts
 bower link gz-cmd
 bower link gz-grant
-bower link gz-simulation
 bower link gz-simulationlauncher
 bower link gz-simulationq
 bower link gz-simulator

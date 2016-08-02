@@ -3,7 +3,6 @@
 (cd gz-accounts && bower link)
 (cd gz-cmd && bower link)
 (cd gz-grant && bower link)
-(cd gz-simulation && bower link)
 (cd gz-simulationlauncher && bower link)
 (cd gz-simulationq && bower link)
 (cd gz-simulator && bower link)
