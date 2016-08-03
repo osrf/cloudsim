@@ -88,8 +88,11 @@ If you are not working against local versions of the servers, you can use the pu
 
 `
 CLOUDSIM_AUTH_URL=https://107.22.153.254:4000
+
 CLOUDSIM_PORTAL_URL=https://cloudsimportal-env.us-east-1.elasticbeanstalk.com:4000
 `
+
+
 
 ### Get in touch  ###
 
