@@ -10,7 +10,7 @@ Install basic tools
 install vcs, a tool to manage multiple repositories
 `sudo apt install python-vcstool`
 
-install nodejs
+install nodejs (must be version 4 and up)
 
 `curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 sudo apt install -y nodejs`
@@ -26,10 +26,26 @@ Gulp, the web 'make'
 Polymer
 `npm install -g polymer-cli`
 
+Note: when installing npm modules, you shouldn't have to be the root user.
+Npm installs packages locally (in the node_modules directory located besides
+ the package.json file). However when you install global packages (with npm -g),
+it can happen that npm fails because it wants to write in /usr/bin or somewhere.
+For those cases, you should use sudo.
 
 ## Get cloudsim sources ##
 
 Run the build.bash to get the sources, and create links accross projects.
+
+`build.bash` does many things, and they could fail.
+
+1. The vcs import command clones
+all the repos, so make sure you have ssh setup with bitbucket and github.
+
+1. The `create link` and `use link` scripts allow you to modify code in the repos
+instead of "installing" the components. For example, if you type:
+`ls -l cloudsim-widgets/app/bower_components/`
+You should notice that gz-token is a link to the `gz-token` repo. This is explained
+below:
 
 ## Projects and links ##
 
@@ -54,10 +70,26 @@ The build.bash script links the cloudsim packages:
 1. Cloudsim-portal: This is the cloud machines server
 1. Cloudsim-grant: This is a server component for access control and database
 
-## Clients ##
+## Clients (web apps) ##
 
 1. Cloudsim-widgets: The Cloudsim app
 1. gz-* webcomponents for the UI / Ajax
+
+## Configuration ##
+
+Clients and servers can have a .env file for configuration. This file is not under
+source control.
+
+
+1. cloudsim-widgets:
+
+Cloudsim-widget needs to know where the auth server and the portal servers are located.
+If you are not working against local versions of the servers, you can use the public ones.  This is an example of the .env file in cloudsim-widget that uses the beanstalk servers:
+
+`
+CLOUDSIM_AUTH_URL=https://107.22.153.254:4000
+CLOUDSIM_PORTAL_URL=https://cloudsimportal-env.us-east-1.elasticbeanstalk.com:4000
+`
 
 ### Get in touch  ###
 
