@@ -5,10 +5,10 @@ This is the Cloudsim meta repository.
 ## Install tools ##
 
 Install basic tools
-`apt install -y sudo curl mercurial git python-pip`
+`sudo apt get install -y curl mercurial git python-pip`
 
 install vcs, a tool to manage multiple repositories
-`sudo apt install python-vcstool`
+`sudo apt-get install python-vcstool`
 
 install nodejs (must be version 4 and up)
 
