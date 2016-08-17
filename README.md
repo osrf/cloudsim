@@ -146,16 +146,16 @@ Cloudsim-auth needs the following keys for webtoken decoding:
 The following repos might need code updates or redeployment to take
 cloudsim-auth changes into account.
 
-* cloudsim-portal
-* cloudsim-widgets
-* cloudsim-sim
+* [cloudsim-portal](https://bitbucket.org/osrf/cloudsim-portal)
+* [cloudsim-widgets](https://bitbucket.org/osrf/cloudsim-widgets)
+* [cloudsim-sim](https://bitbucket.org/osrf/cloudsim-sim)
 * gz-token
 
 ## Cloudsim-grant ##
 
 ### Updates ###
 
-* Pull request to cloudsim-grant. The version number in `package.json` must be
+* Pull request to [cloudsim-grant](https://bitbucket.org/osrf/cloudsim-grant). The version number in `package.json` must be
 increased.
 * Someone with enough permissions must run `npm publish`.
 
@@ -164,14 +164,14 @@ increased.
 The following repos might need code updates or redeployment to take
 cloudsim-grant changes into account.
 
-* cloudsim-sim
-* cloudsim-portal
+* [cloudsim-sim](https://bitbucket.org/osrf/cloudsim-sim)
+* [cloudsim-portal](https://bitbucket.org/osrf/cloudsim-portal)
 
 ## Cloudsim-portal ##
 
 ### Updates ###
 
-* Pull request to cloudsim-portal
+* Pull request to [cloudsim-portal](https://bitbucket.org/osrf/cloudsim-portal)
 * Once merged into default, public server is redeployed by Codeship.
 
 ### Impacted repos ###
@@ -179,15 +179,15 @@ cloudsim-grant changes into account.
 The following repos might need code updates or redeployment to take
 cloudsim-portal changes into account.
 
-* cloudsim-sim
-* cloudsim-widgets
-* gz-XXX
+* [cloudsim-sim](https://bitbucket.org/osrf/cloudsim-sim)
+* [cloudsim-widgets](https://bitbucket.org/osrf/cloudsim-widgets)
+* [gz-XXX](https://github.com/osrf/?utf8=%E2%9C%93&query=gz-)
 
 ## Cloudsim-sim ##
 
 ### Updates ###
 
-* Pull request to cloudsim-sim
+* Pull request to [cloudsim-sim](https://bitbucket.org/osrf/cloudsim-sim)
 * Once merged into default, someone needs to ssh into a live machine to pull
 the new code and then make a new ami.
 * Then add the new ami to the list in
@@ -198,14 +198,14 @@ the new code and then make a new ami.
 The following repos might need code updates or redeployment to take
 cloudsim-sim changes into account.
 
-* cloudsim-widgets
-* gz-XXX
+* [cloudsim-widgets](https://bitbucket.org/osrf/cloudsim-widgets)
+* [gz-XXX](https://github.com/osrf/?utf8=%E2%9C%93&query=gz-)
 
 ## gz-XXX ##
 
 ### Updates ###
 
-* Pull request to gz-XXX.
+* Pull request to [gz-XXX](https://github.com/osrf/?utf8=%E2%9C%93&query=gz-).
 * Once merged into default, make a new release through GitHub.
 
 ### Impacted repos ###
@@ -213,7 +213,7 @@ cloudsim-sim changes into account.
 The following repos might need code updates or redeployment to take
 gz-XXX changes into account.
 
-* cloudsim-widgets
+* [cloudsim-widgets](https://bitbucket.org/osrf/cloudsim-widgets)
 
 # Get in touch  #
 
