@@ -30,7 +30,7 @@ Install vcs, a tool to manage multiple repositories
 Install nodejs (must be version 4 and up)
 
     curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
-    sudo apt install -y nodejs`
+    sudo apt install -y nodejs
 
 Install global node modules:
 
