@@ -46,7 +46,7 @@ cp $srcdir/$target.key $dstdir/client.key
 # in the current directory (this is done by docker)
 pushd .
 cd $dstdir
-tar -zcvf $outdir/openvpn.tar.gz *
+tar -zcvf $outdir/openvpn-client.tar.gz *
 echo "removing $dstdir"
 rm -rf $dstdir
 popd
