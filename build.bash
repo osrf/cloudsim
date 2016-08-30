@@ -13,6 +13,9 @@ vcs import < repositories
 echo -e "\e[0;33mInstalling cloudsim-auth...\033[0m"
 (cd cloudsim-auth && npm install)
 
+echo -e "\e[0;33mInstalling cloudsim-grant...\033[0m"
+(cd cloudsim-grant && npm install)
+
 echo -e "\e[0;33mInstalling cloudsim-portal...\033[0m"
 (cd cloudsim-portal && npm install)
 
