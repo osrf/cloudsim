@@ -8,7 +8,12 @@ cloudsim project, which is composed of several repositories.
 1. [ ![Codeship Status for osrf/cloudsim-auth](https://codeship.com/projects/d48e5670-0c06-0134-283f-368b7d3cc702/status?branch=default)](https://codeship.com/projects/156010) [Cloudsim-auth](https://bitbucket.org/osrf/cloudsim-auth): This is the authentication server.
 1. [ ![Codeship Status for osrf/cloudsim-sim](https://codeship.com/projects/c1074290-4c5e-0134-4ebf-52026d0c47d6/status?branch=default)](https://codeship.com/projects/170204) [Cloudsim-sim](https://bitbucket.org/osrf/cloudsim-sim): This is the simulation controller server.
 1. [ ![Codeship Status for osrf/cloudsim-portal](https://codeship.com/projects/915a1070-0a4d-0134-bce0-06f29080c625/status)](https://codeship.com/projects/155557) [Cloudsim-portal](https://bitbucket.org/osrf/cloudsim-portal): This is the server which manages cloud machines (i.e. Cloudsim-sims).
+1. [ ![Codeship Status for osrf/cloudsim-keys](https://codeship.com/projects/915a1070-0a4d-0134-bce0-06f29080c625/status)](https://codeship.com/projects/155557) [Cloudsim-keys](https://bitbucket.org/osrf/cloudsim-keys): This is the server that provides VPN and SSH keys.
+
+## Server modules ##
+
 1. [ ![Codeship Status for osrf/cloudsim-grant](https://codeship.com/projects/5c4c7e80-0c07-0134-008b-368b7d3cc702/status?branch=default)](https://codeship.com/projects/156011) [Cloudsim-grant](https://bitbucket.org/osrf/cloudsim-grant): This is a server component for access control and database.
+
 
 ## Clients (web apps) ##
 
