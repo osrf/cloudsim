@@ -16,6 +16,9 @@ echo -e "\e[0;33mInstalling cloudsim-auth...\033[0m"
 echo -e "\e[0;33mInstalling cloudsim-grant...\033[0m"
 (cd cloudsim-grant && npm install)
 
+echo -e "\e[0;33mInstalling cloudsim-keys...\033[0m"
+(cd cloudsim-keys && npm install)
+
 echo -e "\e[0;33mInstalling cloudsim-portal...\033[0m"
 (cd cloudsim-portal && npm install)
 
@@ -33,6 +36,7 @@ sudo ./npm_create_links.bash
 
 echo -e "\e[0;33mUsing npm links...\033[0m"
 (cd cloudsim-auth && ../npm_use_links.bash)
+(cd cloudsim-keys && ../npm_use_links.bash)
 (cd cloudsim-portal && ../npm_use_links.bash)
 (cd cloudsim-sim && ../npm_use_links.bash)
 (cd cloudsim-widgets && ../bower_use_links.bash)
