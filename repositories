@@ -8,6 +8,9 @@ repositories:
     type: hg
     url: ssh://hg@bitbucket.org/osrf/cloudsim-grant
     version: default
+  cloudsim-keys:
+    url: ssh://hg@bitbucket.org/osrf/cloudsim-keys
+    version: default
   cloudsim-portal:
     type: hg
     url: ssh://hg@bitbucket.org/osrf/cloudsim-portal
@@ -19,7 +22,8 @@ repositories:
   cloudsim-widgets:
     type: hg
     url: ssh://hg@bitbucket.org/osrf/cloudsim-widgets
-    version: remove_simulationq
+    version: default
+
 
   gz-accounts:
     type: git
@@ -31,7 +35,11 @@ repositories:
     version: master
   gz-grant:
     type: git
-    url: git@github.com:osrf/gz-grant
+    url: git@github.com:osrf/gz-grant.git
+    version: master
+  gz-machinetypes:
+    type: git
+    url: git@github.com:osrf/gz-machinetypes.git
     version: master
   gz-simulator:
     type: git
