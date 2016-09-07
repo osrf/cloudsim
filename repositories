@@ -9,6 +9,7 @@ repositories:
     url: ssh://hg@bitbucket.org/osrf/cloudsim-grant
     version: default
   cloudsim-keys:
+    type: hg
     url: ssh://hg@bitbucket.org/osrf/cloudsim-keys
     version: default
   cloudsim-portal:
