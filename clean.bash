@@ -20,5 +20,5 @@ echo -e "\e[0;33mCleaning cloudsim-sim...\033[0m"
 (cd cloudsim-sim && rm -rf node_modules)
 
 echo -e "\e[0;33mCleaning cloudsim-widgets...\033[0m"
-(cd cloudsim-widgets && n rm -rf node_modules app/bower_components)
+(cd cloudsim-widgets && rm -rf node_modules app/bower_components)
 
