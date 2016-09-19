@@ -5,6 +5,7 @@ bower info osrf/gz-accounts
 bower info osrf/gz-cmd
 bower info osrf/gz-grant
 bower info osrf/gz-machinetypes
+bower info osrf/gz-resources
 bower info osrf/gz-simulationlauncher
 bower info osrf/gz-simulationq
 bower info osrf/gz-simulator
