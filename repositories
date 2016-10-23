@@ -41,7 +41,11 @@ repositories:
     type: git
     url: https://github.com/osrf/gz-machinetypes.git
     version: master
-  gz-simulator:
+  gz-resources:
+    type: git
+    url: https://github.com/osrf/gz-resources.git
+    version: master
+ gz-simulator:
     type: git
     url: https://github.com/osrf/gz-simulator.git
     version: master
