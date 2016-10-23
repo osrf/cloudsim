@@ -2,70 +2,70 @@ repositories:
 
   cloudsim-auth:
     type: hg
-    url: https://bitbucket.org/osrf/cloudsim-auth
+    url: ssh://hg@bitbucket.org/osrf/cloudsim-auth
     version: default
   cloudsim-grant:
     type: hg
-    url: https://bitbucket.org/osrf/cloudsim-grant
+    url: ssh://hg@bitbucket.org/osrf/cloudsim-grant
     version: default
   cloudsim-keys:
     type: hg
-    url: https://bitbucket.org/osrf/cloudsim-keys
+    url: ssh://hg@bitbucket.org/osrf/cloudsim-keys
     version: default
   cloudsim-portal:
     type: hg
-    url: https://bitbucket.org/osrf/cloudsim-portal
-    version: default
+    url: ssh://hg@bitbucket.org/osrf/cloudsim-portal
+    version: grant_socket
   cloudsim-sim:
     type: hg
-    url: https://bitbucket.org/osrf/cloudsim-sim
+    url: ssh://hg@bitbucket.org/osrf/cloudsim-sim
     version: default
   cloudsim-widgets:
     type: hg
-    url: https://bitbucket.org/osrf/cloudsim-widgets
+    url: ssh://hg@bitbucket.org/osrf/cloudsim-widgets
     version: default
 
   gz-accounts:
     type: git
-    url: https://github.com/osrf/gz-accounts.git
+    url: git@github.com:osrf/gz-accounts.git
     version: master
   gz-cmd:
     type: git
-    url: https://github.com/osrf/gz-cmd.git
+    url: git@github.com:osrf/gz-cmd.git
     version: master
   gz-grant:
     type: git
-    url: https://github.com/osrf/gz-grant.git
+    url: git@github.com:osrf/gz-grant.git
     version: master
   gz-machinetypes:
     type: git
-    url: https://github.com/osrf/gz-machinetypes.git
+    url: git@github.com:osrf/gz-machinetypes.git
     version: master
   gz-resources:
     type: git
-    url: https://github.com/osrf/gz-resources.git
+    url: git@github.com:osrf/gz-resources.git
     version: master
- gz-simulator:
+  gz-simulator:
     type: git
-    url: https://github.com/osrf/gz-simulator.git
+    url: git@github.com:osrf/gz-simulator.git
     version: master
   gz-simulatorlauncher:
     type: git
-    url: https://github.com/osrf/gz-simulatorlauncher.git
+    url: git@github.com:osrf/gz-simulatorlauncher.git
     version: master
   gz-simulationq:
     type: git
-    url: https://github.com/osrf/gz-simulationq.git
+    url: git@github.com:osrf/gz-simulationq.git
     version: master
   gz-simulationlauncher:
     type: git
-    url: https://github.com/osrf/gz-simulationlauncher.git
+    url: git@github.com:osrf/gz-simulationlauncher.git
     version: master
   gz-simulatorq:
     type: git
-    url: https://github.com/osrf/gz-simulatorq.git
+    url: git@github.com:osrf/gz-simulatorq.git
     version: master
   gz-token:
     type: git
-    url: https://github.com/osrf/gz-token.git
+    url: git@github.com:osrf/gz-token.git
     version: master
