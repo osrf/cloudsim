@@ -1,4 +1,4 @@
-#!/usr/bin/env
+#!/usr/bin/env bash
 
 sudo apt-get install openvpn easy-rsa
 
