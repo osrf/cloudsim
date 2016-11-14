@@ -15,7 +15,7 @@ $DIR/build.bash
 
 if [ $# == 1 ] && [ "$1" == link ]; then
   echo -e "\e[0;33mLinking repositories...\033[0m"
-  $DIR/build.bash
+  $DIR/link.bash
 else
   echo -e "\e[0;33mNot linking repositories, you can run [link.bash] manually.\033[0m"
 fi
