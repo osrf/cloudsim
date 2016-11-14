@@ -12,6 +12,3 @@ vcs import < repositories
 
 $DIR/build.bash
 
-$DIR/link.bash
-
-
