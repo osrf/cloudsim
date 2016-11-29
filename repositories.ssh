@@ -70,3 +70,7 @@ repositories:
     type: git
     url: git@github.com:osrf/gz-token.git
     version: master
+  gz-keys:
+    type: git
+    url: git@github.com:osrf/gz-keys.git
+    version: master
