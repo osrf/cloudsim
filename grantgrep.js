@@ -26,6 +26,18 @@ for (let i in lines) {
       ignored.push(line)
       continue
     }
+
+    if (file.indexOf('.js.orig') != -1) {
+      ignored.push(line)
+      continue
+    }
+
+    if (file.indexOf('coverage/lcov-report') != -1) {
+      ignored.push(line)
+      continue
+    }
+
+
     const nb = toks[1]
     const grant = toks[2]
     const grant1 = grant.substring(grant.indexOf('cloudsim-grant.'))
