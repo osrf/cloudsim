@@ -94,7 +94,8 @@ for (let c in sortedCalls) {
   console.log('==============================')
   for (let i in lines) {
     const line = lines[i]
-    console.log( line, '(' + i + ')\n')
+    console.log( i+')',line)
+    console.log()
   }
 }
 
