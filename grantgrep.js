@@ -9,6 +9,22 @@ const locals = []
 const modules = {}
 const calls ={}
 
+
+function extractRepos(lines) {
+  const repos = new Set()
+  for (let i in lines) {
+    const l = lines[i]
+    const line = l.split('\n')[1]
+    const sub = line.substring(line.indexOf('./cloudsim-'))
+    const head = sub.split('/')[1]
+//    console.log('DEBUG', sub, head)
+    repos.add(head)
+  }
+
+  const r = Array.from(repos)
+  return r.sort()
+}
+
 function splitGrant(grant, log) {
   // cut the left of first csgrant
   const grant1 = grant.substring(grant.indexOf('csgrant.'))
@@ -68,6 +84,11 @@ for (let i in lines) {
   }
 
   if (file.indexOf('coverage/lcov-report') != -1) {
+    ignored.push(line)
+    continue
+  }
+
+  if (file.indexOf('grantgrep.js') != -1) {
     ignored.push(line)
     continue
   }
@@ -136,7 +157,9 @@ console.log()
 for (let c in sortedCalls) {
   const call = sortedCalls[c]
   const lines = calls[call].sort()
+  const repos = extractRepos(lines)
   console.log(call, '(' + lines.length + ' calls )')
+//  console.log(repos)
 }
 
 const tests = [
