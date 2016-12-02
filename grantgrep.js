@@ -145,6 +145,8 @@ const tests = [
   "console.log('grep -rn csgrant\. .')"
 
 ]
-var l = tests[2]
-var r = splitGrant(l, console.log)
+if (false) {
+  var l = tests[2]
+  var r = splitGrant(l, console.log)
+}
 console.log('RESULT', r)
