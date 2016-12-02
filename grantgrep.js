@@ -9,6 +9,30 @@ const locals = []
 const modules = {}
 const calls ={}
 
+function splitGrant(grant, log) {
+  // cut the left of first csgrant
+  const grant1 = grant.substring(grant.indexOf('csgrant.'))
+  const toks = grant1.split('csgrant.')
+  const res = []
+  for (let i in toks) {
+    const grant2 = toks[i]
+    if (grant2.indexOf(' ') == 0)
+      continue
+    if (grant2.indexOf("'") == 0)
+      continue
+    const grant3 = grant2.split('(')[0]
+    const grant4 = grant3.trim()
+    const grant5 = grant4.replace(')', '')
+    const grant6 = grant5.replace(',', '')
+    if (grant6.length > 0)
+      res.push(grant6)
+    if (log)
+      log(grant, '|', grant1, '|', grant2, '|', grant3, '|', grant4, '|', grant5, '|', grant6)
+  }
+
+  return res
+}
+
 for (let i in lines) {
   const line = lines[i]
   if (line.indexOf('require') != -1 ) {
@@ -16,37 +40,45 @@ for (let i in lines) {
     continue
   }
   const toks = line.split(':')
-  if (toks.length >=3 ) {
-    const file = toks[0]
-    if (file.indexOf('cloudsim-grant') != -1) {
-      locals.push(line)
-      continue
-    }
-    if (file.indexOf('/.hg/cache/') != -1) {
-      ignored.push(line)
-      continue
-    }
+  if (toks.length < 3 ) {
+    ignored.push(line)
+    continue
+  }
 
-    if (file.indexOf('.js.orig') != -1) {
-      ignored.push(line)
-      continue
-    }
+  const file = toks[0]
+  const nb = toks[1]
+  const grant = toks[2]
 
-    if (file.indexOf('coverage/lcov-report') != -1) {
-      ignored.push(line)
-      continue
-    }
+  if (file.indexOf('cloudsim-grant') != -1) {
+    locals.push(line)
+    continue
+  }
+  if (file.indexOf('/.hg/cache/') != -1) {
+    ignored.push(line)
+    continue
+  }
 
+  if (file.indexOf('.js.orig') != -1) {
+    ignored.push(line)
+    continue
+  }
+  if (file.indexOf('coverage_server') != -1) {
+    ignored.push(line)
+    continue
+  }
 
-    const nb = toks[1]
-    const grant = toks[2]
-    const grant1 = grant.substring(grant.indexOf('cloudsim-grant.'))
-    const grant2 = grant1.replace('csgrant.','')
-    const grant3 = grant2.split('(')[0]
-    const grant4 = grant3.trim()
-    const grant5 = grant4.replace(')', '')
-    const grant6 = grant5.replace(',', '')
-    const g = grant6
+  if (file.indexOf('coverage/lcov-report') != -1) {
+    ignored.push(line)
+    continue
+  }
+
+  const gtoks = splitGrant(grant)
+  if (gtoks.length ==0){
+    ignored.push(line)
+    continue
+  }
+  for (let i in gtoks) {
+    const g = gtoks[i]
     if (g.indexOf('//') == 0) {
       ignored.push(line)
       continue
@@ -99,3 +131,20 @@ for (let c in sortedCalls) {
   }
 }
 
+console.log()
+// compact
+for (let c in sortedCalls) {
+  const call = sortedCalls[c]
+  const lines = calls[call].sort()
+  console.log(call, '(' + lines.length + ' calls )')
+}
+
+const tests = [
+  '                   csgrant.grantPermission(req.user, resourceData.golduser, r.id, true,',
+  "app.delete('/permissions',csgrant.authenticate, csgrant.revoke)",
+  "console.log('grep -rn csgrant\. .')"
+
+]
+var l = tests[2]
+var r = splitGrant(l, console.log)
+console.log('RESULT', r)
