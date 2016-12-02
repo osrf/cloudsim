@@ -148,5 +148,5 @@ const tests = [
 if (false) {
   var l = tests[2]
   var r = splitGrant(l, console.log)
+  console.log('RESULT', r)
 }
-console.log('RESULT', r)
